@@ -1,9 +1,13 @@
 import React from "react";
+import SearchButton from "./SearchButton";
+import Container from "./Container";
+import ButtonContainer from "./ButtonContainer";
+
 import "../css/basic-items.css";
 
 export default function Form() {
   return (
-    <section className="container">
+    <Container>
       <label htmlFor="artistName" className="form-label">
         Artista
       </label>
@@ -22,6 +26,9 @@ export default function Form() {
         placeholder="Insira o nome da música"
         className="form-field"
       />
-    </section>
+      <ButtonContainer>
+        <SearchButton text="Buscar" />
+      </ButtonContainer>
+    </Container>
   );
 }

@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import MainContainer from "../components/MainContainer";
 import Navbar from "../components/Navbar";
 import LogoImg from "../img/Logo laranja.svg";
 import Logo from "../components/Logo";
@@ -9,13 +9,13 @@ import "../css/home.css";
 
 export default function Home() {
   return (
-    <Container>
+    <MainContainer>
       <Navbar>
         <Logo src={LogoImg} alt="Logo do Lendo Música"></Logo>
         <NavText text="Últimas buscas" customClass="history" href="" />
       </Navbar>
       <Title text="Buscar letra" />
       <Form />
-    </Container>
+    </MainContainer>
   );
 }
