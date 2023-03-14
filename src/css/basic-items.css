@@ -67,3 +67,9 @@
 .button:hover {
   cursor: pointer;
 }
+
+.plain-text {
+  color: #ffffff;
+  font-size: 16px;
+  max-width: 500px;
+}
