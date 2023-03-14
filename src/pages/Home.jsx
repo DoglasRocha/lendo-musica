@@ -4,6 +4,7 @@ import LogoImg from "../img/Logo laranja.svg";
 import Logo from "../components/Logo";
 import NavText from "../components/NavText";
 import Title from "../components/Title";
+import Form from "../components/Form";
 import "../css/home.css";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <NavText text="Últimas buscas" customClass="history" href="" />
       </Navbar>
       <Title text="Buscar letra" />
+      <Form />
     </Container>
   );
 }
