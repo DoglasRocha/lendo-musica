@@ -26,6 +26,9 @@ export default function Form() {
         placeholder="Insira o nome da música"
         className="form-field"
       />
+      <br />
+      <br />
+      <br />
       <ButtonContainer>
         <SearchButton text="Buscar" />
       </ButtonContainer>
