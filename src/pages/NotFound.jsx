@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <MainContainer>
       <Navbar>
-        <Logo src={LogoImg} alt="Logo do Lendo Música"></Logo>
+        <span></span>
+        <Logo src={LogoImg} alt="Logo do Lendo Música" />
+        <span></span>
       </Navbar>
       <Title text="Letra não encontrada" />
       <img src={MeninaNoSofa} alt="Menina no sofá" />
