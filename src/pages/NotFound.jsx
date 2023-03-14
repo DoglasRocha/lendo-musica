@@ -6,7 +6,6 @@ import Title from "../components/Title";
 import Text from "../components/Text";
 import SearchButton from "../components/SearchButton";
 import MeninaNoSofa from "../img/Menina no sofa.svg";
-import "../css/home.css";
 
 export default function Home() {
   return (
