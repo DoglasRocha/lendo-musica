@@ -1,9 +1,10 @@
 import Container from "../components/Container";
 import Navbar from "../components/Navbar";
 import LogoImg from "../img/Logo laranja.svg";
-import Logo from "../components/Logo"
+import Logo from "../components/Logo";
 import NavText from "../components/NavText";
-import "../css/home.css"
+import Title from "../components/Title";
+import "../css/home.css";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Logo src={LogoImg} alt="Logo do Lendo Música"></Logo>
         <NavText text="Últimas buscas" customClass="history" href="" />
       </Navbar>
+      <Title text="Buscar letra" />
     </Container>
   );
 }
