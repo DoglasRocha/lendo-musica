@@ -13,6 +13,10 @@
   min-width: 80vw;
 }
 
+.nav-center {
+  justify-content: center;
+}
+
 .page-title {
   color: #ffffff;
   font-weight: 700;
@@ -22,6 +26,7 @@
 
 .logo {
   width: 300px;
+  margin: auto 0;
 }
 
 .nav-text {

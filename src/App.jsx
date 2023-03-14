@@ -5,7 +5,7 @@ import "./css/basic-setup.css";
 function App() {
   return (
     <>
-      <NotFound />
+      <Home />
     </>
   );
 }

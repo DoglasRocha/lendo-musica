@@ -1,3 +1,10 @@
-export default function Navbar({ children }) {
-  return <nav className="navbar">{children}</nav>;
+export default function Navbar({ children, navCenter }) {
+  const navCenterClass = navCenter ? "nav-center" : "";
+
+  return (
+    <nav className={"navbar " + navCenterClass}>
+      {console.log(navCenter)}
+      {children}
+    </nav>
+  );
 }
