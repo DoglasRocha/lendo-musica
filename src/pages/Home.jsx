@@ -1,13 +1,16 @@
 import Container from "../components/Container";
 import Navbar from "../components/Navbar";
-import Logo from "../img/Logo laranja.svg";
+import LogoImg from "../img/Logo laranja.svg";
+import Logo from "../components/Logo"
+import NavText from "../components/NavText";
+import "../css/home.css"
 
 export default function Home() {
   return (
     <Container>
       <Navbar>
-        <img src={Logo} alt="Logo do Lendo Música" />
-        <p>Últimas buscas</p>
+        <Logo src={LogoImg} alt="Logo do Lendo Música"></Logo>
+        <NavText text="Últimas buscas" customClass="history" href="" />
       </Navbar>
     </Container>
   );

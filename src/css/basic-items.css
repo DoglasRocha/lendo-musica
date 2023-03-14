@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 .navbar {
@@ -11,4 +11,21 @@
   justify-content: space-between;
   align-items: center;
   min-width: 80vw;
+}
+
+.page-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+}
+
+.nav-text {
+  font-size:24px;
+  text-align: center;
+  text-decoration: none;
 }
