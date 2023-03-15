@@ -8,8 +8,11 @@ import SearchButton from "../components/SearchButton";
 import Container from "../components/Container";
 import LogoImg from "../img/Logo laranja.svg";
 import "../css/history.css";
+import { SetGradientBg } from "../components/ChangeBgColor";
 
 export default function Home() {
+  SetGradientBg();
+
   return (
     <MainContainer>
       <Navbar>

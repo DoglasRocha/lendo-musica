@@ -7,8 +7,10 @@ import Text from "../components/Text";
 import SearchButton from "../components/SearchButton";
 import LogoImg from "../img/Logo azul.svg";
 import "../css/lyric.css";
+import { SetLightBg } from "../components/ChangeBgColor";
 
 export default function Lyric() {
+  SetLightBg();
   return (
     <MainContainer>
       <Navbar>

@@ -6,8 +6,11 @@ import NavText from "../components/NavText";
 import Title from "../components/Title";
 import Form from "../components/Form";
 import "../css/home.css";
+import { SetGradientBg } from "../components/ChangeBgColor";
 
 export default function Home() {
+  SetGradientBg();
+
   return (
     <MainContainer>
       <Navbar>

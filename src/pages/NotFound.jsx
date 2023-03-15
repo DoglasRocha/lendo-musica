@@ -6,8 +6,11 @@ import Title from "../components/Title";
 import Text from "../components/Text";
 import SearchButton from "../components/SearchButton";
 import MeninaNoSofa from "../img/Menina no sofa.svg";
+import { SetGradientBg } from "../components/ChangeBgColor";
 
 export default function Home() {
+  SetGradientBg();
+
   return (
     <MainContainer>
       <Navbar navCenter="true">
