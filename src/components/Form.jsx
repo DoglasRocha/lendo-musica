@@ -1,6 +1,7 @@
 import React from "react";
 import SearchButton from "./SearchButton";
 import Container from "./Container";
+import Lupa from "../img/Lupa.svg";
 import ButtonContainer from "./ButtonContainer";
 
 import "../css/basic-items.css";
@@ -30,7 +31,7 @@ export default function Form() {
       <br />
       <br />
       <ButtonContainer>
-        <SearchButton text="Buscar" />
+        <SearchButton text="Buscar" lupa={Lupa} />
       </ButtonContainer>
     </Container>
   );

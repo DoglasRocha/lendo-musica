@@ -6,6 +6,7 @@ import Title from "../components/Title";
 import Text from "../components/Text";
 import SearchButton from "../components/SearchButton";
 import Card from "../components/Card";
+import Lupa from "../img/Lupa.svg";
 import { SetGradientBg } from "../components/ChangeBgColor";
 
 export default function Found() {
@@ -19,7 +20,7 @@ export default function Found() {
       <Title text="Letra encontrada" />
       <Card artist="Eminem" song="Rap God" />
       <Text text="Não encontrou o que procurava?" className="not-found-text" />
-      <SearchButton text="Nova busca" />
+      <SearchButton text="Nova busca" lupa={Lupa} />
     </MainContainer>
   );
 }

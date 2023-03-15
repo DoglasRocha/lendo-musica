@@ -1,4 +1,26 @@
-body {
-  background-color: #ffffff;
-  /* background-image: none; */
+.nav-text-blue {
+  color: #219ebc;
+  font-size: 24px;
+}
+
+.main-title {
+  color: #023047;
+}
+
+.lyric {
+  color: #023047;
+  font-size: 22px;
+}
+
+.liked {
+  font-weight: 700;
+  font-size: 24px;
+  color: #023047;
+}
+
+.blue-button {
+  background-color: #219ebc;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
 }

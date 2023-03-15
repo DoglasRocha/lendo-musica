@@ -7,6 +7,7 @@ import Button from "../components/Button";
 import SearchButton from "../components/SearchButton";
 import Container from "../components/Container";
 import LogoImg from "../img/Logo laranja.svg";
+import Lupa from "../img/Lupa.svg";
 import "../css/history.css";
 import { SetGradientBg } from "../components/ChangeBgColor";
 
@@ -30,7 +31,7 @@ export default function Home() {
         <Button text="teste 1 - 0" />
         <Button text="teste 1 - 0" />
         <Button text="teste 1 - 0" />
-        <SearchButton text="Nova busca" />
+        <SearchButton text="Nova busca" lupa={Lupa} />
       </Container>
     </MainContainer>
   );

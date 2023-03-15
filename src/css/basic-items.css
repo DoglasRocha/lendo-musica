@@ -48,6 +48,11 @@
   justify-content: space-between;
 }
 
+.horizontal-container {
+  display: flex;
+  align-items: center;
+}
+
 .button-container {
   justify-content: center;
   align-items: center;

@@ -8,7 +8,7 @@ import Lyric from "./pages/Lyric";
 function App() {
   return (
     <>
-      <Lyric />
+      <Found />
     </>
   );
 }
