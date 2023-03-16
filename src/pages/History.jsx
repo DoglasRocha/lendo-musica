@@ -9,7 +9,7 @@ import Container from "../components/Container";
 import LogoImg from "../img/Logo laranja.svg";
 import Lupa from "../img/Lupa.svg";
 import "../css/history.css";
-import { SetGradientBg } from "../components/ChangeBgColor";
+import { SetGradientBg } from "../features/ChangeBgColor";
 
 export default function Home() {
   SetGradientBg();

@@ -10,10 +10,15 @@ import LogoImg from "../img/Logo azul.svg";
 import Seta from "../img/Seta.svg";
 import LupaBranca from "../img/Lupa_branco.svg";
 import "../css/lyric.css";
-import { SetLightBg } from "../components/ChangeBgColor";
+import { SetLightBg } from "../features/ChangeBgColor";
+import { redirectToHome } from "../features/Redirects";
 
 export default function Lyric() {
   SetLightBg();
+
+  const song = JSON.parse(localStorage.getItem("requestedSong"));
+  const lyric = song.mus[0].text.split("\n");
+
   return (
     <MainContainer>
       <Navbar>
@@ -21,21 +26,29 @@ export default function Lyric() {
         <HorizontalContainer>
           <img src={Seta} alt="Seta de navegação" />
           &emsp;
-          <NavText text="Voltar para a busca" customClass="nav-text-blue" />
+          <NavText
+            text="Voltar para a busca"
+            href={"/"}
+            customClass="nav-text-blue"
+          />
         </HorizontalContainer>
       </Navbar>
-      <Title text="Rap God" customClass="main-title" />
-      <Text
-        text="
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, doloremque maxime? Sequi excepturi iste quis reiciendis quos atque? Ea ipsam voluptates veniam hic sapiente earum provident nesciunt a in sed!"
-        customClass="lyric"
-      />
+      <Title text={song.mus[0].name} customClass="main-title" />
+      <br />
+      <div>
+        {lyric.map((line) => (
+          <Text text={line} customClass="lyric" />
+        ))}
+      </div>
+      <br />
       <Text text="Curtiu? Busque mais letras" customClass="liked" />
+      <br />
       <SearchButton
         text="Nova busca"
         customClass="blue-button"
         lupa={LupaBranca}
-      ></SearchButton>
+        action={redirectToHome}
+      />
     </MainContainer>
   );
 }

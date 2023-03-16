@@ -7,7 +7,11 @@ import Text from "../components/Text";
 import SearchButton from "../components/SearchButton";
 import Lupa from "../img/Lupa.svg";
 import MeninaNoSofa from "../img/Menina no sofa.svg";
-import { SetGradientBg } from "../components/ChangeBgColor";
+import { SetGradientBg } from "../features/ChangeBgColor";
+
+const redirectToHome = () => {
+  window.location.href = "/";
+};
 
 export default function Home() {
   SetGradientBg();
@@ -20,7 +24,7 @@ export default function Home() {
       <Title text="Letra não encontrada" />
       <img src={MeninaNoSofa} alt="Menina no sofá" />
       <Text text="Essa música ainda não foi escrita, mas não fique triste, você pode acessar milhares de músicas realizando uma nova busca <3" />
-      <SearchButton text="Nova busca" lupa={Lupa} />
+      <SearchButton text="Nova busca" lupa={Lupa} action={redirectToHome} />
     </MainContainer>
   );
 }

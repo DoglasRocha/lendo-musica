@@ -6,7 +6,7 @@ import NavText from "../components/NavText";
 import Title from "../components/Title";
 import Form from "../components/Form";
 import "../css/home.css";
-import { SetGradientBg } from "../components/ChangeBgColor";
+import { SetGradientBg } from "../features/ChangeBgColor";
 
 export default function Home() {
   SetGradientBg();
@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <MainContainer>
       <Navbar>
-        <Logo src={LogoImg} alt="Logo do Lendo Música"></Logo>
-        <NavText text="Últimas buscas" customClass="history" href="" />
+        <Logo src={LogoImg} alt="Logo do Lendo Música" />
+        <NavText text="Últimas buscas" customClass="history" href="/history" />
       </Navbar>
       <Title text="Buscar letra" />
       <Form />
