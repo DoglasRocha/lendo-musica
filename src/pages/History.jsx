@@ -1,3 +1,4 @@
+import { useState } from "react";
 import MainContainer from "../components/MainContainer";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
@@ -10,9 +11,22 @@ import LogoImg from "../img/Logo laranja.svg";
 import Lupa from "../img/Lupa.svg";
 import "../css/history.css";
 import { SetGradientBg } from "../features/ChangeBgColor";
+import {
+  clearSongHistory,
+  getSongFromHistory,
+  handleFormSubmission,
+} from "../features/Songs";
+import { redirectToHome } from "../features/Redirects";
 
-export default function Home() {
+export default function History() {
   SetGradientBg();
+
+  const [history, setHistory] = useState(getSongFromHistory());
+
+  const clearHistory = () => {
+    clearSongHistory();
+    setHistory(getSongFromHistory());
+  };
 
   return (
     <MainContainer>
@@ -21,17 +35,22 @@ export default function Home() {
         <NavText
           text="Limpar histórico X"
           customClass="clear-history"
-          href=""
+          action={clearHistory}
         />
       </Navbar>
       <Title text="Histórico" />
       <Container>
-        <Button text="teste 1 - 0" />
-        <Button text="teste 1 - 0" />
-        <Button text="teste 1 - 0" />
-        <Button text="teste 1 - 0" />
-        <Button text="teste 1 - 0" />
-        <SearchButton text="Nova busca" lupa={Lupa} />
+        {history.map(({ artist, song }) => {
+          return (
+            <Button
+              text={`${artist} - ${song}`}
+              action={() =>
+                handleFormSubmission({ artist: artist, song: song })
+              }
+            />
+          );
+        })}
+        <SearchButton text="Nova busca" lupa={Lupa} action={redirectToHome} />
       </Container>
     </MainContainer>
   );

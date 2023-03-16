@@ -2,11 +2,11 @@ import React from "react";
 import Text from "./Text";
 import "../css/card.css";
 
-export default function Card({ artist, song }) {
+export default function Card({ artist, song, href }) {
   return (
-    <div className="card">
+    <a className="card" href={href}>
       <Text text={artist} customClass="artist" />
       <Text text={song} customClass="song" />
-    </div>
+    </a>
   );
 }

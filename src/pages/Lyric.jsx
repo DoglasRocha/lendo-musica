@@ -36,8 +36,8 @@ export default function Lyric() {
       <Title text={song.mus[0].name} customClass="main-title" />
       <br />
       <div>
-        {lyric.map((line) => (
-          <Text text={line} customClass="lyric" />
+        {lyric.map((line, index) => (
+          <Text text={line} customClass="lyric" key={index} />
         ))}
       </div>
       <br />

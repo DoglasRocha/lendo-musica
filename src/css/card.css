@@ -6,6 +6,8 @@
   border-radius: 4px;
   width: 345px;
   height: 120px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .song {

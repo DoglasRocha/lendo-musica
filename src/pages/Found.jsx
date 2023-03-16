@@ -9,9 +9,12 @@ import Card from "../components/Card";
 import Lupa from "../img/Lupa.svg";
 import { SetGradientBg } from "../features/ChangeBgColor";
 import { redirectToHome } from "../features/Redirects";
+import { getSongFromLocalStorage } from "../features/Songs";
 
 export default function Found() {
   SetGradientBg();
+
+  const song = getSongFromLocalStorage();
 
   return (
     <MainContainer>
@@ -19,7 +22,7 @@ export default function Found() {
         <Logo src={LogoImg} alt="Logo do Lendo Música" />
       </Navbar>
       <Title text="Letra encontrada" />
-      <Card artist="Eminem" song="Rap God" />
+      <Card artist={song.art.name} song={song.mus[0].name} href="/lyric" />
       <Text text="Não encontrou o que procurava?" className="not-found-text" />
       <SearchButton text="Nova busca" lupa={Lupa} action={redirectToHome} />
     </MainContainer>
