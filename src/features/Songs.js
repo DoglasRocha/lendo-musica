@@ -21,7 +21,6 @@ const handleFormSubmission = async (formInfo) => {
     localStorage.setItem("requestedSong", JSON.stringify(request));
     window.location.href = "/found";
   } else {
-    console.log(request);
     window.location.href = "/notfound";
   }
 };
