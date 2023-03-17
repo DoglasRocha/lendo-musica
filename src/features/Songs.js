@@ -5,7 +5,7 @@ const getURL = (artist, song) => {
 
 const putInHistory = (song) => {
   let history = JSON.parse(localStorage.getItem("songHistory"));
-  if (history === undefined) history = [];
+  if (history === null) history = [];
   history.push(song);
   localStorage.setItem("songHistory", JSON.stringify(history));
 };
