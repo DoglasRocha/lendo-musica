@@ -5,7 +5,7 @@ const getURL = (artist, song) => {
 
 const putInHistory = (song) => {
   let history = JSON.parse(localStorage.getItem("songHistory"));
-  if (history === undefined) history = [];
+  if (history === null) history = [];
   history.push(song);
   localStorage.setItem("songHistory", JSON.stringify(history));
 };
@@ -21,7 +21,6 @@ const handleFormSubmission = async (formInfo) => {
     localStorage.setItem("requestedSong", JSON.stringify(request));
     window.location.href = "/found";
   } else {
-    console.log(request);
     window.location.href = "/notfound";
   }
 };
